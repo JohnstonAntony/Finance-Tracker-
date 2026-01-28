@@ -10,4 +10,5 @@ public class AppDbContext : DbContext
     }
 
     public DbSet<Transaction> Transactions { get; set; }
-}
+} 
+// files branch error, Transaction model doesn't exist. Will add tomorrow.
