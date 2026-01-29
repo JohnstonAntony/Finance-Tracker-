@@ -23,3 +23,4 @@ public class IndexModel : PageModel // Razor page model for displaying transacti
             .ToListAsync();
     }
 }
+// works
