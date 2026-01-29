@@ -1,1 +1,41 @@
-@*add transactions page tomorrow*@
+@page
+@model FinanceTracker.Pages.Transactions.IndexModel
+
+@{
+    ViewData["Title"] = "Transactions";
+}
+
+<h1>Transactions</h1>
+
+<p>
+    <a class="btn btn-primary" asp-page="/Transactions/Create">Add Transaction</a> @*creates correct url to the Create page*@
+</p>
+
+@if (Model.Transactions.Count == 0)
+{
+    <p>No transactions yet.</p> @*Space holder for empty transactions*@
+}
+else
+{
+    <table class="table"> @*Transaction table w/ formats*@
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Description</th>
+                <th>Category</th>
+                <th class="text-end">Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var trans in Model.Transactions)
+            {
+                <tr>
+                    <td>@trans.Date.ToString("yyyy-MM-dd")</td>
+                    <td>@trans.Description</td>
+                    <td>@trans.Category</td>
+                    <td class="text-end">@trans.Amount.ToString("0.00")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
