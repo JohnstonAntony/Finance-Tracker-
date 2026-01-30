@@ -11,6 +11,9 @@
     <a class="btn btn-primary" asp-page="/Transactions/Create">Add Transaction</a> @*creates correct url to the Create page*@
 </p>
 
+<a class="btn btn-outline-secondary" asp-page="/Transactions/Summary">Monthly Summary</a>
+
+
 @if (Model.Transactions.Count == 0)
 {
     <p>No transactions yet.</p> @*Space holder for empty transactions*@
@@ -25,7 +28,7 @@ else
                 <th>Category</th>
                 <th class="text-end">Amount</th>
             </tr>
-        </thead>
+        </thead> 
         <tbody>
             @foreach (var trans in Model.Transactions)
             {
