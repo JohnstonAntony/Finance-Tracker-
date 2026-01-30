@@ -19,10 +19,15 @@
         <span asp-validation-for="Transaction.Description" class="text-danger"></span>
     </div>
 
-    <div class="mb-3"> @*Form field for transaction category.*@
-        <label asp-for="Transaction.Category" class="form-label"></label>
-        <input asp-for="Transaction.Category" class="form-control" />
-        <span asp-validation-for="Transaction.Category" class="text-danger"></span>
+    <div class="mb-3">
+      <label asp-for="Transaction.Category" class="form-label"></label>
+      <select asp-for="Transaction.Category" class="form-select">
+         @foreach (var cat in FinanceTracker.Pages.Transactions.CreateModel.Categories)
+         {
+             <option value="@cat">@cat</option>
+         }
+      </select>
+      <span asp-validation-for="Transaction.Category" class="text-danger"></span>
     </div>
 
     <div class="mb-3"> @*Form field for transaction amount.*@

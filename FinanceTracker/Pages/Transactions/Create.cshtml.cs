@@ -17,6 +17,20 @@ public class CreateModel : PageModel
     [BindProperty] //binds automatically to inputs.
     public Transaction Transaction { get; set; } = new();
 
+      public static readonly string[] Categories = // List of predefined categories for transactions.
+     [
+      "General",
+      "Food",
+      "Transport",
+      "Bills",
+      "Shopping",
+      "Entertainment",
+      "Health",
+      "Salary",
+      "Subscription",
+      "Investment",
+      "Other"
+    ];
     public void OnGet()
     {
         //empty to show form
@@ -34,4 +48,6 @@ public class CreateModel : PageModel
 
         return RedirectToPage("/Transactions/Index"); // redirects to main page after saving transaction.
     }
+
+   
 }
