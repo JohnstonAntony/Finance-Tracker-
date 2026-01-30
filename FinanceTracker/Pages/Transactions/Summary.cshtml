@@ -1,0 +1,29 @@
+@page
+@model FinanceTracker.Pages.Transactions.SummaryModel
+
+@{
+    ViewData["Title"] = "Monthly Summary";
+}
+
+<h1>Monthly Summary</h1>
+
+<form method="get" class="row g-2 align-items-end mb-3">
+    <div class="col-auto"> @*Year input -> sends input to backend*@
+        <label class="form-label" asp-for="Year"></label>
+        <input class="form-control" asp-for="Year" />
+    </div>
+    <div class="col-auto"> @*Month input, sends imput to backend with Validation to retain scope*@
+        <label class="form-label" asp-for="Month"></label>
+        <input class="form-control" asp-for="Month" min="1" max="12" />
+    </div>
+    <div class="col-auto">
+        <button class="btn btn-primary" type="submit">View</button>
+        <a class="btn btn-secondary" asp-page="/Transactions/Index">Back</a>
+    </div>
+</form>
+
+<div class="mb-3"> @*Displays the summary from the user input, Only renders values*@
+    <div><strong>Income:</strong> @Model.Income.ToString("0.00")</div>
+    <div><strong>Expenses:</strong> @Model.Expenses.ToString("0.00")</div>
+    <div><strong>Net:</strong> @Model.Net.ToString("0.00")</div>
+</div>
