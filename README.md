@@ -5,6 +5,9 @@ It allows you to track income, expenses, monthly spending, transactions history 
 This project was mainly build to learn core web page development and backend concepts using C# and .NET
 
 
+
+
+
 Features- 
 Add Income and Expenses 
 Categorised transactions
@@ -14,12 +17,19 @@ Validation for input values
 SQL datebase storage
 Simple and clean UI. 
 
+
+
+
+
 Tech Stack-
 C#
 .NET 8 / ASP.NET Core Razor Pages
 Entity Framework Core
 SQLite
 HTML / Bootstrap (Default Style)
+
+
+
 
 
 To Run- 
@@ -30,11 +40,18 @@ cd FinanceTracker
 dotnet run
 Copy and paste local host URL in your web browser
 
+
+
+
 Learning Objectives- 
 How Razor pages works with using folders and @pages.
 Working on both backend and frontend development of a web page.
 Debugging run time errors and stack traces.
 SQLite basics.
+
+
+
+
 
 Future Improvemnts- 
 
@@ -43,6 +60,11 @@ Delete functions for transactions.
 Reoccurring bills for subscription that can be changed by the user.
 Daily spending limits. 
 Family database with mutiple user logins.
+
+
+
+
+
 
 Why this project-
 
