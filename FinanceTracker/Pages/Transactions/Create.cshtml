@@ -20,7 +20,7 @@
     </div>
 
     <div class="mb-3">
-      <label asp-for="Transaction.Category" class="form-label"></label>
+      <label asp-for="Transaction.Category" class="form-label"></label> @*Updated Transaction category to include dropdown feature*@
       <select asp-for="Transaction.Category" class="form-select">
          @foreach (var cat in FinanceTracker.Pages.Transactions.CreateModel.Categories)
          {
