@@ -18,7 +18,7 @@ Features:
 Tech Stack:
 
 - C#
-- .NET 8 / ASP.NET Core Razor Pages
+- .NET 10 / ASP.NET Core Razor Pages
 - Entity Framework Core
 - SQLite
 - HTML / Bootstrap (Default Style)
